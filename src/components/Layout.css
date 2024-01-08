@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quattrocento&family=Satisfy&display=swap');
+
+
+.arkaplan {
+  background-image: url(/mvp-banner.png);
+  padding-top: 2rem;
+  width: 100%;
+  height: 1080px;
+}
+
+.aciktim {
+  border-radius: 20px;
+  padding: 10px 55px;
+  background-color: #fdc913;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
+}
+
+.yazi {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.baslik {
+  font-size: 48px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 900;
+  color: white;
+}
+
+.slogan {
+  font-family: 'Bebas Neue', sans-serif;;
+  color: white;
+  font-size: 60px;
+  font-weight: 100;
+  line-height: 3rem;
+}
+
+.buttonCont {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.firsat {
+  font-family: "Satisfy", cursive;
+  color: #fdc913;
+  padding-top: 2rem;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+/* ikon kismi */
+
+.icons-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin: 0 20%;
+}
+
+.icon-group {
+  display: flex;
+  align-items: center;
+  margin: 0 2px;
+}
+
+.icon-group img {
+  margin-right: 5px;
+}
+
+.urunler {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0.5rem;
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+}
+
+.beyaz {
+    background-color: white;
+}
+
+/* reklam kismi */
+
+.lezzetus {
+    display: flex;
+}
+
+.lezzetus img{
+    border-radius: 10px;
+}
+
+.kargo-hack {
+    display: flex;
+    flex-direction: column;
+}
+
+.hackathlon {
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.kargo {
+    padding-left: 1.5rem;
+}
+
+
+.kargo-hack img {
+    border-radius: 10px;
+    display: flex;
+}
+
+.reklamlar {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    padding-top: 5rem;
+}
+
+.reklam-container {
+    background-color: #FAF7F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ozel-lezzetus {
+    font-size: 54px;
+    font-family: 'Quattrocento', serif;
+    line-height: 3.5rem;
+    margin-top: 3rem;
+    margin-left: 2rem;
+    font-weight: 600;
+}
+
+.pa {
+    margin-left: 2rem;
+    font-family: "Barlow", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.pizza-buton {
+    background-color: white;
+    border: none;
+    color: #CE2829;
+    font-family: "Barlow", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    width: 20%;
+    padding: 0.8rem 0;
+    border-radius: 20px;
+    margin-left: 2rem;
+}
+
+.ham {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    padding-top: 2rem;
+    padding-left: 2rem;
+}
+
+.hamb {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    padding-left: 2rem;
+}
+
+.kur {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    color: #292929;
+    padding-top: 2rem;
+    padding-left: 2rem;
+}
+
+.kury {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    color: #292929;
+    padding-left: 2rem;
+}
+
+.sag-siparis {
+    background-color: white;
+    border: none;
+    color: #CE2829;
+    font-family: "Barlow", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    width: 20%;
+    padding: 0.8rem 0;
+    border-radius: 20px;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+.urunler-container {
+    background-color: #FAF7F2;
+    padding-top: 6rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.encokpaket {
+    color:#CE2829;
+    font-family: "Satisfy", cursive;
+    text-align: center;
+}
+
+.aciktiran {
+    color:#292929;
+    text-align: center;
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+}
+
+.kategoriler {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 2.5rem;
+}
+
+.yemek-butonu {
+    background-color: white;
+    border: none;
+    display: flex;
+    border: 1px solid white;
+    border-radius: 200px;
+    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin: 1rem
+}
+
+.yemek-text {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    padding-left: 0.5rem;
+    padding-bottom: 1rem;
+    display: flex;
+    margin-top: 0.5rem;
+    
+}
+
+.butonlar {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.5rem;
+}
+
+.yemek-butonu:hover{
+    background-color: #292929;
+    color: white;
+}
+
+.urun-title{
+    font-family: "Barlow", sans-serif;
+    font-weight: 600; 
+    font-size: 18px;
+}
+
+.fiyat-yorum{
+    font-family: "Barlow", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    gap:60px;
+}
+
+.card-ort {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    font-family: "Barlow", sans-serif;
+}
+
+.urun-resmi{
+    margin-top: 1rem;
+}
+
+.urun-resimleri {
+    display: flex;
+    justify-content: space-between;
+    gap:2rem;
+    margin-top: 2rem;
+    margin-bottom: 7rem;
+}
+
+.navi {
+    min-height: 300px;
+    background-color: #292929;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.nav-icons {
+    display: flex;
+    float: left;
+
+    
+}
+
+.nav-i {
+    width: 25px;
+    height: 30px;
+    align-content: flex-start;
+}
+
+.teknobas {
+    font-family: "Barlow", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.iletisim {
+    display: flex;
+    flex-direction: column;
+}
+
+.iletisim-text {
+    font-family: "Barlow", sans-serif;
+    margin-left: 0.3rem;
+}
+
+.iletisim-cont {
+    display: flex;
+    gap: 5rem;
+    align-items: baseline;
+    justify-content: flex-start;
+    margin: 0 auto;
+
+}
+
+.smenu-text {
+    font-family: "Barlow", sans-serif; 
+    font-weight: 600;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.iletext {
+    font-family: "Barlow", sans-serif;
+    margin-left: 0.3rem;
+    line-height: 14px;
+}
+
+.insta-foto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.fotom {
+    flex: 1 0 calc(33.33% - 10px);
+    height: 80px;
+    width: 40px;
+    border-radius: 5px;
+}
+
+.alt-kisim{
+    background-color: #292929;
+    padding-bottom: 1rem;
+}
+
+.copyright {
+    color: white;
+    padding-left:18rem;
+}
+
