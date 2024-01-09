@@ -1,6 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quattrocento&family=Satisfy&display=swap');
+
 .slogo {
     padding-top: 1rem;
     padding-bottom: 1rem;
+    margin: 0 auto;
 }
 
 .arkap {
@@ -8,27 +14,199 @@
     /* position: sticky; */
 }
 
-.main-content {
-    width: 620px;
+.main-top {
+    width: 600px;
     margin: 0 auto;
 }
 
-.navKismi {
+.navKism {
     text-decoration: none;
-    color: white;
     display: flex;
-    font-weight: 300;
+    font-weight: 600;
     flex-wrap: nowrap;
-    margin: 0 12rem;
+    margin-top: 2rem;
+    font-family: "Barlow", sans-serif;
+    font-size: 14px;
   }
 
 a.nav-link {
-    color:#292929;
+    color:#5F5F5F;
     display: flex;
+    margin: 0;
+    padding: 0;
+    
 }
 
 a.nav-link:hover {
     color:#CE2829;
 }
 
+.main-cont {
+    background-color:#FAF7F2;
+}
 
+.cizgi {
+    color: #5F5F5F;
+    padding: 0 5px 7px 5px;
+}
+
+.pizza-adi {
+    font-size: 19px;
+    color: #292929;
+    font-family: "Barlow", sans-serif;
+    display: flex;
+    align-items: flex-start;
+    font-weight: 600;
+}
+
+.fiyatp {
+    font-size: 22px;
+    font-weight: 600;
+    font-family: "Barlow", sans-serif;
+}
+
+.yorum-puan {
+    font-family: "Barlow", sans-serif;
+    display: flex;
+    gap:7rem;
+    font-size: 15px;
+}
+
+.fiyatbil {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.urun-acik {
+    font-family: "Barlow", sans-serif;
+    color: #5F5F5F;
+    padding-bottom: 2rem;
+}
+
+/* boyut seçimi */
+
+.boyutVeHamur {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.boyutcont {
+    font-family: "Barlow", sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.boyut-buton {
+    border-radius: 30px;
+    margin: 5px;
+    margin-top: 0;
+    background-color: #FAF7F2;
+    border: none;
+    color:#5F5F5F;
+    font-size: 15px;
+}
+
+.bhyazi {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600; 
+    font-size: 18px;
+}
+
+/* hamur özellikleri */
+
+.secenek {
+    font-size: large;
+    font-family: "Barlow", sans-serif;
+    display: flex;
+    margin: -14px;
+    font-weight: 600;
+    padding: 1rem;
+
+  }
+
+  .form-select {
+    width: 14rem;
+    background-color: #FAF7F2;
+  }
+
+  .hamurcont {
+    flex-wrap: wrap;
+  }
+
+
+/* ek malzeme kismi */
+
+.form-check-input {
+    width: 40px;
+    height: 40px;
+    background-color: #FAF7F2;
+    border: none;
+    border-radius: 10px;
+}
+
+.form-check-input:checked {
+    background-color: #FDC913;
+}
+
+.sebzeler {
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    font-weight: 600;
+    font-family: "Barlow", sans-serif;
+}
+
+.ekMal-container {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.kabak {
+    margin-left: -100px;
+    font-weight: 500;  
+}
+
+.ekMalzeme {
+    float: left;
+    font-size: 15px;
+  }
+  .ekMalzemeBaslik {
+    float: left;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Barlow", sans-serif;
+  }
+
+  .acikGri {
+    color: #5f5f5f;
+  }
+
+ .ekMalz {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+ }
+  
+
+ .siparisNotu {
+    padding-top: 6rem;
+    font-family: "Barlow", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .siparisBaslik {
+    display: flex;
+    margin-right: 32rem;
+    font-weight: 600;
+    font-family: "Barlow", sans-serif;
+  }
+
+  .alt-cizgi {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
