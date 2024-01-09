@@ -253,7 +253,7 @@ function Siparis() {
             </p>
             
             </div>
-
+        <div className="seçeneklericeri">
       <div className="row">
                 <FormGroup check inline name="toppings" className="col">
                   <Input
@@ -422,6 +422,7 @@ function Siparis() {
                   </div>
                 </FormGroup>
               </div>
+              </div>
       </div>
 
       <div className="siparisNotu">
@@ -497,6 +498,53 @@ function Siparis() {
           </div>
           
     </div>
+
+    <div className="nav-container">
+      <div className="navi">
+      <div className="iletisim-cont">
+         <div className="iletisim">
+          <img className="teknobas" src="logo-footer.svg" alt="" />
+          <div className="nav-icons">
+                  <img src="./icons/icon-1.png" alt="lokasyon" className="nav-i"/>
+                  <p class="iletisim-text">341 Londonderry Road, <br /> Istanbul Türkiye</p>                  
+          </div>
+          <div className="nav-icons">
+                  <img src="./icons/icon-2.png" alt="mail" className="nav-i" />
+                  <p class="iletisim-text">aciktim@teknolojikyemekler.com</p>
+          </div>
+          <div className="nav-icons">
+                  <img src="./icons/icon-3.png" alt="telefon" className="nav-i" />
+                  <p class="iletisim-text">+90 216 123 45 67</p>
+          </div>
+          </div> 
+          <div className="nav-duzen">
+          <div className="smenu">
+            <h5 className="smenu-text">Hot Menu</h5>
+          <p class="iletext">Terminal Pizza</p>
+          <p class="iletext">5 Kişilik Hackathlon Pizza</p>
+          <p class="iletext">useEffect Tavuklu Pizza</p>
+          <p class="iletext">Beyaz Console Frosty</p>
+          <p class="iletext">Testler Geçti Mutlu Burger</p>
+          <p class="iletext">Position Absolute Acı Burger</p>
+          </div>
+          </div>   
+          <div className="inst">
+          <h5 className="smenu-text">Instagram</h5>
+          <div className="insta-foto">
+          <img src="./insta/li-0.png" alt="yemek" className="fotom" />
+          <img src="./insta/li-1.png" alt="yemek" className="fotom" />
+          <img src="./insta/li-2.png" alt="yemek" className="fotom" />
+          <img src="./insta/li-3.png" alt="yemek" className="fotom" />
+          <img src="./insta/li-4.png" alt="yemek" className="fotom" />
+          <img src="./insta/li-5.png" alt="yemek" className="fotom" />
+          </div>
+          </div>     
+          </div>        
+      </div>
+      <div className="alt-kisim">
+        <p className="copyright">© 2023 Teknolojik Yemekler.</p>
+      </div>  
+      </div>
     </Form>
 
   );
