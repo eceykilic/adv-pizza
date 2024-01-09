@@ -189,6 +189,8 @@ a.nav-link:hover {
     margin-bottom: 3rem;
     margin-top: 3rem;
  }
+
+ /* sipariş notu */
   
 
  .siparisNotu {
@@ -196,13 +198,15 @@ a.nav-link:hover {
     font-family: "Barlow", sans-serif;
     font-size: 18px;
     font-weight: 600;
+    width: 600px;
+    margin: 0 auto;
   }
   
   .siparisBaslik {
     display: flex;
-    margin-right: 32rem;
     font-weight: 600;
     font-family: "Barlow", sans-serif;
+    font-size: 20px;
   }
 
   .alt-cizgi {
@@ -210,3 +214,101 @@ a.nav-link:hover {
     margin-bottom: 2rem;
   }
   
+  #special-text {
+    background-color: #FAF7F2;
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    color: #5f5f5f;
+    border: none;
+  }
+
+  /* adet arttirma ve sipariş özeti */
+
+  .minus-button,
+.plus-button {
+  width: 2.5rem;
+  border: 0.5px solid #FAF7F2;
+  background-color: #FAF7F2;
+  font-size: 1em;
+  cursor: pointer;
+  color: #5f5f5f;
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+
+.adet-kutusu {
+  border: 0.5px solid #FAF7F2;
+  background-color: #FAF7F2;
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.adet-bolumu {
+  text-align: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.adet-ve-siparis {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.plusmin {
+    display: flex;
+}
+
+.artiEksi {
+  display: flex;
+  margin: 0 auto;
+  width: 600px;
+  justify-content: space-between;
+}
+
+.adet-sayisi {
+  padding-top: 0.7rem;
+  padding-left: 1.2rem;
+}
+
+
+.siparis-bolumu {
+    border: 1px solid #FAF7F2;
+    background-color: #FAF7F2;
+    font-weight: 600;
+    font-family: "Barlow", sans-serif;
+    width: 350px;
+    height: 180px;
+}
+
+
+.siparis-bolumu > div:nth-child(2),
+.siparis-bolumu > div:nth-child(3) {
+  margin: 10px 0;
+}
+
+
+.secimler {
+  display: flex;
+  gap: 10rem;
+  padding-top: 1rem;
+  padding-left: 2rem;
+}
+
+.altKisim {
+  display: flex;
+}
+
+#order-button {
+  width: 100%;
+  background-color: #FDC913;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  font-family: "Barlow", sans-serif;
+  cursor: pointer;
+}

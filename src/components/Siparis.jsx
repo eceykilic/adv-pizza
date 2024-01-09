@@ -38,6 +38,61 @@ function Siparis() {
     setSize(newSize);
   };
 
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    // Manuel doğrulama işlemleri
+    if (!size) {
+      setErrorMessage("Lütfen bir boyut seçin.");
+      return;
+    }
+
+    if (!crust || crust.length === 0) {
+      setErrorMessage("Lütfen bir hamur seçin.");
+      return;
+    }
+
+    if (!toppings || toppings.length < 4) {
+      setErrorMessage("Lütfen en az 4 ek malzeme seçin.");
+      return;
+    }
+
+    if (toppings.length > 10) {
+      setErrorMessage("En fazla 10 ek malzeme seçebilirsiniz.");
+      return;
+    }
+
+    if (!adet || adet <= 0) {
+      setErrorMessage("Lütfen geçerli bir adet girin.");
+      return;
+    }
+
+    // tüm koşulları sağlıyorsa gönder
+    const order = {
+      size,
+      toppings,
+      special,
+      Fiyat: total,
+      adet,
+    };
+
+    axios
+      .post("https://reqres.in/api/users", order)
+      .then((response) => {
+        console.log("Sipariş başarıyla gönderildi:", response);
+        setSize("");
+        setToppings([]);
+        setSpecial("");
+        setErrorMessage("");
+        navigate("/final");
+      })
+      .catch((error) => {
+        console.error("Sipariş gönderilirken hata oluştu:", error);
+      });
+  };
+
   const handleToppingsChange = (event) => {
     const toppingName = event.target.value;
     const isChecked = event.target.checked;
@@ -55,6 +110,7 @@ function Siparis() {
     });
   };
 
+
   useEffect(() => {
     setSecimler(toppings.length * adet * 5);
     setTotal(calculateTotalPrice(adet, toppings));
@@ -71,8 +127,12 @@ function Siparis() {
     setSpecial(event.target.value);
   };
 
+  const isButtonDisabled =
+    !size || !crust || toppings.length < 4 || toppings.length > 10 || adet <= 0;
+
 
   return (
+    <Form onSubmit={handleSubmit}>
     <div>
       <div className="arkap">
         <img src="logo-2.svg" alt="" className="slogo" />
@@ -96,6 +156,7 @@ function Siparis() {
               </NavItem>
             </Nav>
           </div>
+          
           <p className="pizza-adi">Position Absolute Acı Pizza</p>
           <div className="fiyatbil">
             <p className="fiyatp">85₺</p>
@@ -115,6 +176,7 @@ function Siparis() {
           </p>
         </div>
       </div>
+      
       <div className="boyutVeHamur">
         <div className="boyutcont">
           <p className="bhyazi">
@@ -380,7 +442,63 @@ function Siparis() {
           <hr />
         </div>
         </div>
+
+        <div className="artiEksi">
+            <div className="plusmin">
+          <div>
+            <Button
+              className="minus-button"
+              type="button"
+              onClick={() => {
+                if (adet > 1) {
+                  setAdet(adet - 1);
+                }
+              }}
+            >
+              -
+            </Button>
+          </div>
+          <div className="altKisim">
+            <div className="adet-kutusu">
+              <p className="adet-sayisi">{adet}</p>
+            </div>
+            <div>
+              <Button
+                className="plus-button"
+                type="button"
+                onClick={() => setAdet(adet + 1)}
+              >
+                +
+              </Button>
+            </div>
+          </div>
+          </div>
+
+          <div className="siparis-bolumu">
+            
+            <FormGroup >
+              <Label className="secimler">Sipariş Toplamı</Label>
+            </FormGroup>
+            <FormGroup className="secimler">
+              <span>Seçimler:</span> <span>{secimler} ₺</span>
+            </FormGroup>
+            <FormGroup className="secimler" style={{ color: "#ce2829" }}>
+              <span>Toplam:</span> <span>{total} ₺</span>
+            </FormGroup>
+
+            <Button id="order-button" type="submit" disabled={isButtonDisabled}>
+              SİPARİŞ VER
+            </Button>
+  
+        </div>
+
+
+        
+          </div>
+          
     </div>
+    </Form>
+
   );
 }
 
