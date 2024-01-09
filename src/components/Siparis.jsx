@@ -76,22 +76,26 @@ function Siparis() {
       special,
       Fiyat: total,
       adet,
+      secimler,
+      crust,
     };
 
     axios
-      .post("https://reqres.in/api/users", order)
-      .then((response) => {
-        console.log("Sipariş başarıyla gönderildi:", response);
-        setSize("");
-        setToppings([]);
-        setSpecial("");
-        setErrorMessage("");
-        navigate("/final");
-      })
-      .catch((error) => {
-        console.error("Sipariş gönderilirken hata oluştu:", error);
-      });
-  };
+    .post("https://reqres.in/api/users", order)
+    .then((response) => {
+      console.log("Sipariş başarıyla gönderildi:", response);
+      setSize("");
+      setToppings([]);
+      setSpecial("");
+      setErrorMessage("");
+      setSecimler("");
+      setCrust("");
+      navigate("/final", { state: { order } });
+    })
+    .catch((error) => {
+      console.error("Sipariş gönderilirken hata oluştu:", error);
+    });
+};
 
   const handleToppingsChange = (event) => {
     const toppingName = event.target.value;
@@ -187,8 +191,8 @@ function Siparis() {
             <ButtonGroup>
               <Button
                 className="boyut-buton"
-                active={size === "small"}
-                onClick={() => handleSizeChange("small")}
+                active={size === "S"}
+                onClick={() => handleSizeChange("S")}
                 size="lg"
               >
                 S
@@ -197,8 +201,8 @@ function Siparis() {
             <ButtonGroup>
               <Button
                 className="boyut-buton"
-                active={size === "medium"}
-                onClick={() => handleSizeChange("medium")}
+                active={size === "M"}
+                onClick={() => handleSizeChange("M")}
                 size="lg"
               >
                 M
@@ -207,8 +211,8 @@ function Siparis() {
             <ButtonGroup>
               <Button
                 className="boyut-buton"
-                active={size === "large"}
-                onClick={() => handleSizeChange("large")}
+                active={size === "L"}
+                onClick={() => handleSizeChange("L")}
                 size="lg"
               >
                 L
@@ -282,7 +286,7 @@ function Siparis() {
                     type="checkbox"
                     onChange={handleToppingsChange}
                     value="KanadaJambonu"
-                    checked={toppings.includes("Kanada Jambonu")}
+                    checked={toppings.includes("KanadaJambonu")}
                   />
                   <Label check className="sebzeler">
                     Kanada Jambonu
@@ -296,7 +300,7 @@ function Siparis() {
                     type="checkbox"
                     onChange={handleToppingsChange}
                     value="TavukIzgara"
-                    checked={toppings.includes("Tavuk Izgara")}
+                    checked={toppings.includes("TavukIzgara")}
                   />
                   <Label check className="sebzeler">
                     Tavuk Izgara

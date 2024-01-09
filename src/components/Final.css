@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quattrocento&family=Satisfy&display=swap');
+
+
+.ustbaslik {
+    margin: 0 auto;
+    padding-top: 3rem;
+}
+
+.kipkirmizi {
+    background-color: #CE2829;
+    height: 1080px;
+}
+
+.lezzetgeliyor {
+    color:#FDC913;
+    font-family: "Satisfy", cursive;
+    font-size: 36px;
+    display: flex;
+    margin-top: 3rem;
+}
+
+.icerik {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.siparisalindi {
+    font-family: "Barlow", sans-serif;
+    font-size: 64px;
+    color: white;
+    display: flex;
+}
+
+.sipariscont {
+    flex-direction: column;
+    width: 600px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.pizzadi {
+    font-family: "Barlow", sans-serif;
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 4rem;
+}
+
+.siparis-top {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 2rem;
+    line-height: 20px;
+    font-family: "Barlow", sans-serif;
+    margin: 0 auto;
+}
+
+.siparis-info {
+    font-family: "Barlow", sans-serif; 
+    color: white;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    width: 200px;
+}
+
+.sec {
+    display: flex;
+    justify-content: space-between;
+}
+
+.topla {
+    display: flex;
+    justify-content: space-between;
+}
+
+.basliktoplam {
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+}
+
+.sec {
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.topla {
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+}

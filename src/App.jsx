@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import Siparis from "./components/Siparis"
 import Anasayfa from "./components/Anasayfa"
-/* import Final from "./components/Final" */
+import Final from "./components/Final"
 
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Anasayfa />}/>
       <Route path="/pizza" element={<Siparis />}/>
+      <Route path="/final" element={<Final />}/>
       </Routes>
 
   );
