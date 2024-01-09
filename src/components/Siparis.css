@@ -1,0 +1,34 @@
+.slogo {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.arkap {
+    background-color:#CE2829;
+    /* position: sticky; */
+}
+
+.main-content {
+    width: 620px;
+    margin: 0 auto;
+}
+
+.navKismi {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    font-weight: 300;
+    flex-wrap: nowrap;
+    margin: 0 12rem;
+  }
+
+a.nav-link {
+    color:#292929;
+    display: flex;
+}
+
+a.nav-link:hover {
+    color:#CE2829;
+}
+
+

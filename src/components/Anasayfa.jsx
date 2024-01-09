@@ -13,10 +13,11 @@ import {
 
 function Anasayfa() {
   return (
-    <>
+    <div>
       <div className="arkaplan">
+      <img src="logo.svg" alt="Teknolojik Yemekler logo" className="main-logo" />
         <div className="yazi">
-          <p className="baslik">Teknolojik Yemekler</p>
+          
           <p className="firsat">fırsatı kaçırma</p>
           <p className="slogan">KOD ACIKTIRIR</p>
           <p className="slogan">PIZZA, DOYURUR </p>
@@ -141,10 +142,8 @@ function Anasayfa() {
         <div className="urun-resimleri">
           <Card
             style={{
-              width: "80%",
+              width: "40%",
               border: "none",
-              paddingLeft:"3rem",
-              paddingRight:"3rem",
               borderRadius:"20px"
             }}
           >
@@ -166,10 +165,8 @@ function Anasayfa() {
           </Card>
           <Card
             style={{
-              width: "80%",
+              width: "40%",
               border: "none",
-              paddingLeft:"3rem",
-              paddingRight:"3rem",
               borderRadius:"20px"
             }}
           >
@@ -191,10 +188,8 @@ function Anasayfa() {
           </Card>
           <Card
             style={{
-              width: "80%",
+              width: "40%",
               border: "none",
-              paddingLeft:"3rem",
-              paddingRight:"3rem",
               borderRadius:"20px"
             }}
           >
@@ -220,7 +215,7 @@ function Anasayfa() {
       <div className="navi">
       <div className="iletisim-cont">
          <div className="iletisim">
-          <p className="teknobas">Teknolojik <br /> Yemekler</p>
+          <img className="teknobas" src="logo-footer.svg" alt="" />
           <div className="nav-icons">
                   <img src="./icons/icon-1.png" alt="lokasyon" className="nav-i"/>
                   <p class="iletisim-text">341 Londonderry Road, <br /> Istanbul Türkiye</p>                  
@@ -234,8 +229,9 @@ function Anasayfa() {
                   <p class="iletisim-text">+90 216 123 45 67</p>
           </div>
           </div> 
+          <div className="nav-duzen">
           <div className="smenu">
-            <h5 className="smenu-text">Sıccacık Menuler</h5>
+            <h5 className="smenu-text">Hot Menu</h5>
           <p class="iletext">Terminal Pizza</p>
           <p class="iletext">5 Kişilik Hackathlon Pizza</p>
           <p class="iletext">useEffect Tavuklu Pizza</p>
@@ -254,13 +250,14 @@ function Anasayfa() {
           <img src="./insta/li-4.png" alt="yemek" className="fotom" />
           <img src="./insta/li-5.png" alt="yemek" className="fotom" />
           </div>
-          </div>             
+          </div>     
+          </div>        
       </div>
       <div className="alt-kisim">
         <p className="copyright">© 2023 Teknolojik Yemekler.</p>
       </div>  
       </div>
-    </>
+    </div>
   );
 }
 
