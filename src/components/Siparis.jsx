@@ -57,7 +57,7 @@ function Siparis() {
     const order = {
       size,
       toppings,
-      special,
+      special, // order olarak iletilir ama sipariş özetinde gösterilmez
       Fiyat: total,
       adet,
       secimler,
