@@ -135,7 +135,7 @@ a.nav-link:hover {
   }
 
   .hamurcont {
-    flex-wrap: wrap;
+    display: flex;
   }
 
 
@@ -318,3 +318,34 @@ a.nav-link:hover {
   font-family: "Barlow", sans-serif;
   cursor: pointer;
 }
+
+.malzeme-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 600px;
+  row-gap: 2rem;
+}
+
+.malzeme-container .col {
+  flex: 0 0 calc(33.33% - 1rem); 
+  box-sizing: border-box;
+}
+
+/* son malzemeyi ortala */
+.malzeme-container::after {
+  content: "";
+  flex: auto;
+  box-sizing: border-box;
+}
+
+.error-messages {
+  color: #CE2829;
+  font-size: 15px;
+  font-family: "Barlow", sans-serif;
+  display: flex;
+  width: 600px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
