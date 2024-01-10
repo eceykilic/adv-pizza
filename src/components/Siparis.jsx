@@ -25,9 +25,9 @@ function Siparis() {
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+    event.preventDefault();  // sayfa yeniden yüklenmesini engelledik, durumlar korundu
 
-    // Manuel doğrulama işlemleri
+    // Manuel doğrulama işlemleri error mesajları {errorMessage} ile div içerisinde gösterilebilir
     if (!size) {
       setErrorMessage("Lütfen bir boyut seçin.");
       return;
@@ -74,23 +74,23 @@ function Siparis() {
       setErrorMessage("");
       setSecimler("");
       setCrust("");
-      navigate("/final", { state: { order } });
+      navigate("/final", { state: { order } }); //useHistory ile history.push("/final", {state: {order}})
     })
     .catch((error) => {
       console.error("Sipariş gönderilirken hata oluştu:", error);
     });
 };
 
-  const handleToppingsChange = (event) => {
+  const handleToppingsChange = (event) => { // event = checkbox işaretlenmesi
     const toppingName = event.target.value;
     const isChecked = event.target.checked;
 
     setToppings((currentToppings) => {
       const updatedToppings = isChecked
-        ? [...currentToppings, toppingName]
-        : currentToppings.filter((topping) => topping !== toppingName);
+        ? [...currentToppings, toppingName] // true ise topping(value) ek malzeme listesine eklenir
+        : currentToppings.filter((topping) => topping !== toppingName); // false ise filtrelenerek o malzeme ismi bulunur ve listeden çıkarılır
 
-      // Ek malzemelerin toplam fiyatını hesaplayan fonksiyon
+      // Ek malzemelerin toplam fiyatını hesaplama
       const updatedTotal = calculateTotalPrice(adet, updatedToppings);
       setTotal(updatedTotal);
 
@@ -102,18 +102,18 @@ function Siparis() {
   useEffect(() => {
     setSecimler(toppings.length * adet * 5);
     setTotal(calculateTotalPrice(adet, toppings));
-  }, [toppings, adet]);
+  }, [toppings, adet]); //use effect sayesinde her topping seçimi veya her adet arttırımı calculateTotalPrice'ı tetikler
 
-  const calculateTotalPrice = (newAdet, updatedToppings) => {
+  const calculateTotalPrice = (guncelAdet, updatedToppings) => {
     const anaFiyat = 85.5;
-    const ekMalzemeFiyati = (updatedToppings?.length || 0) * 5;
-    const toplamFiyat = (anaFiyat + ekMalzemeFiyati) * newAdet;
+    const ekMalzemeFiyati = (updatedToppings?.length || 0) * 5; // soru işareti if bloğu yazmamama yardımcı oldu, undefined veya null değilse çalışır
+    const toplamFiyat = (anaFiyat + ekMalzemeFiyati) * guncelAdet;
     return toplamFiyat;
   };
 
   const handleSpecialChange = (event) => {
     setSpecial(event.target.value);
-  }; 
+  }; //aktif olarak gösterilmiyor
 
   const isButtonDisabled =
     !size || !crust || toppings.length < 4 || toppings.length > 10 || adet <= 0;
