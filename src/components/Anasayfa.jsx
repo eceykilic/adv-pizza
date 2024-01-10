@@ -14,7 +14,7 @@ import {
 function Anasayfa() {
   return (
     <div>
-      <div className="arkaplan">
+      <header className="arkaplan">
       <img src="logo.svg" alt="Teknolojik Yemekler logo" className="main-logo" />
         <div className="yazi">
           
@@ -27,8 +27,9 @@ function Anasayfa() {
             ACIKTIM
           </Link>
         </div>
-      </div>
+      </header>
 
+      <main>
       <div className="icons-container beyaz">
         <div className="icon-group">
           <img src="icons/1.svg" alt="" />
@@ -211,6 +212,9 @@ function Anasayfa() {
           </Card>
         </div>
       </div>
+      </main>
+      
+      <footer>
       <div className="nav-container">
       <div className="navi">
       <div className="iletisim-cont">
@@ -257,7 +261,9 @@ function Anasayfa() {
         <p className="copyright">© 2023 Teknolojik Yemekler.</p>
       </div>  
       </div>
+      </footer>
     </div>
+    
   );
 }
 
