@@ -23,7 +23,7 @@ function Anasayfa() {
           <p className="slogan">PIZZA, DOYURUR </p>
         </div>
         <div className="buttonCont">
-          <Link to="/pizza" className="aciktim">
+          <Link to="/pizza" className="aciktim" id="order-pizza">
             ACIKTIM
           </Link>
         </div>

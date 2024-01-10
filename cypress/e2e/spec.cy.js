@@ -1,51 +1,72 @@
+describe("template spec", () => {
+  it("passes", () => {
+    cy.visit("/pizza");
+  });
+});
+
+//sipariş eksikken final sayfası
+describe('sipariş sayfasında eksik hatası', function() { 
+  it('Baştan sona kadar doğru ilerliyor mu?', function() {
+    cy.visit('/');
+    cy.get('#order-pizza').click();
+    cy.visit('/pizza');
+
+    cy.contains('Domates').click();
+    cy.contains('Mısır').click();
+    cy.contains('Soğan').click();
+    cy.contains('Pepperoni').click();
+    cy.contains('Sucuk').click();
+    
+    cy.get('button[type="submit"]').should("be.visible");
+    
+    cy.visit('/final');
+  
+  })
+  
+})
+
+// error mesajları
 describe('Link Navigation', function() {
   beforeEach(() => {
-    cy.intercept('GET', 'http://localhost:5173/pizza').as('getPizza'); 
+    cy.visit('/pizza');
   });
 
-  it('4-10 arası malzeme seçilebilir ve Sipariş Ver butonu görünür olmalı', function() {
-    cy.wait('@getPizza');
-
+  it('4-10 arası malzeme seçilebilir', function() {
     
-    cy.intercept('GET', 'http://localhost:5173/pizza', {
-      ekMalzemeler: ['Biber', 'Mısır', 'Soğan', 'Pepperoni', 'Ananas']
-    }).as('getPizzaWithToppings');
+    cy.visit('/pizza');
 
-    cy.visit('http://localhost:5173/pizza');
 
-    // 5 malzeme seç
-    cy.get('.sebzeler input[value="Biber"]').click();
-    cy.get('.sebzeler input[value="Mısır"]').click();
-    cy.get('.sebzeler input[value="Biber"]').click();
-    cy.get('.sebzeler input[value="Mısır"]').click();
-    cy.get('.sebzeler input[value="Soğan"]').click();
-    cy.get('.sebzeler input[value="Pepperoni"]').click();
-    cy.get('.sebzeler input[value="Ananas"]').click();
+    // Toplam 3 malzeme
+    cy.contains('Domates').click();
+    cy.contains('Mısır').click();
+    cy.contains('Soğan').click();
 
-    cy.get('.error-message').should('not.exist');
-    cy.get('button[type="submit"]').should("be.visible");
-  });
+    cy.get('#order-button').click();
 
-  it('4 elemandan az seçilemez ve hata mesajı gösterilmeli', function() {
- 
-    cy.wait('@getPizza');
-
-  
-    cy.intercept('GET', 'http://localhost:5173/pizza', {
-      ekMalzemeler: ['Domates', 'Mısır', 'Soğan']
-    }).as('getPizzaWithToppings');
-
-    cy.visit('http://localhost:5173/pizza');
-
-    // 3 malzeme seç
-    cy.get('.sebzeler input[value="Domates"]').click();
-    cy.get('.sebzeler input[value="Mısır"]').click();
-    cy.get('.sebzeler input[value="Soğan"]').click();
-
-    // butona bas
-    cy.get('button[type="submit"]').click();
+    cy.wait(100);
 
     // error mesajı geldi mi
     cy.get('.error-message').should('be.visible').and('contain', 'Lütfen en az 4 ek malzeme seçin.');
   });
+
+  it('boyut seçildi ama hamur seçilmedi', function() {
+    
+    cy.visit('/pizza');
+
+
+    // Toplam 4 malzeme
+    cy.contains('S').click();
+    cy.contains('Mısır').click();
+    cy.contains('Soğan').click();
+    cy.contains('Sucuk').click();
+    cy.contains('Kabak').click();
+
+    cy.get('#order-button').click();
+
+    cy.wait(100);
+
+    // error mesajı geldi mi
+    cy.get('.error-message').should('be.visible').and('contain', 'Lütfen bir hamur seçin.');
+  });
+
 });
