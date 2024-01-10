@@ -55,7 +55,7 @@ describe('Link Navigation', function() {
 
 
     // Toplam 4 malzeme
-    cy.contains('S').click();
+    cy.contains('M').click();
     cy.contains('Mısır').click();
     cy.contains('Soğan').click();
     cy.contains('Sucuk').click();
@@ -69,4 +69,35 @@ describe('Link Navigation', function() {
     cy.get('.error-message').should('be.visible').and('contain', 'Lütfen bir hamur seçin.');
   });
 
+  it('her şey tam seçildi', function() {
+    
+    cy.visit('/pizza');
+
+
+    // Toplam 4 malzeme
+    cy.contains('M').click();
+    cy.contains('Mısır').click();
+    cy.contains('Soğan').click();
+    cy.contains('Sucuk').click();
+    cy.contains('Kabak').click();
+    cy.contains('Ananas').click();
+    cy.contains('Sosis').click();
+
+    // Hamur seçeneklerini içeren select elementini bul
+    cy.get('select#exampleSelect').as('hamurSelect');
+
+    // "Kalın" hamurunu seç
+    cy.get('@hamurSelect').select('Kalın');
+
+    // Seçilen değeri kontrol et
+    cy.get('@hamurSelect').should('have.value', 'Kalın');
+
+    cy.get('#order-button').click();
+  });
+
+  it('Eksik Bilgilerle Sipariş Gönderme', function () {
+    // Hata durumlarını kontrol et
+    cy.get('#order-button').click();
+    cy.get('.error-message').should('be.visible');
+  });
 });

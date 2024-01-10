@@ -87,7 +87,7 @@ a.nav-link:hover {
 
 /* boyut seçimi */
 
-.boyutVeHamur {
+/* .boyutVeHamur {
     display: flex;
     flex-direction: row;
     width: 600px;
@@ -101,6 +101,8 @@ a.nav-link:hover {
     flex-direction: column;
 }
 
+*/
+
 .boyut-buton {
     border-radius: 30px;
     margin: 5px;
@@ -111,10 +113,37 @@ a.nav-link:hover {
     font-size: 15px;
 }
 
+
+
+.hamurcont {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
 .bhyazi {
     font-family: "Barlow", sans-serif;
     font-weight: 600; 
     font-size: 18px;
+}
+
+.boyutcont {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.error-toppings {
+  padding-bottom: 1rem;
+}
+
+
+
+.boyutVeHamur {
+  display: flex;
+  margin: 0 auto;
+  width: 600px;
+  justify-content: space-between;
 }
 
 /* hamur özellikleri */
@@ -339,13 +368,10 @@ a.nav-link:hover {
   box-sizing: border-box;
 }
 
-.error-messages {
+.error-message {
   color: #CE2829;
   font-size: 15px;
   font-family: "Barlow", sans-serif;
-  display: flex;
-  width: 600px;
-  margin: 0 auto;
-  flex-direction: column;
 }
+
 

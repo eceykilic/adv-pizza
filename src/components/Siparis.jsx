@@ -143,7 +143,10 @@ function Siparis() {
   }; //aktif olarak gösterilmiyor
 
   /* const isButtonDisabled =
-    !size || !crust || toppings.length < 4 || toppings.length > 10 || adet <= 0; */
+    !size || !crust || toppings.length < 4 || toppings.length > 10 || adet <= 0; 
+    
+    {toppingsError && <p className="error-message">{toppingsError}</p>}
+    */
 
   return (
     <Form onSubmit={handleSubmit}>
@@ -192,13 +195,9 @@ function Siparis() {
         </div>
       </header>
       <main>
-        <div className="error-messages">
-          {sizeError && <p className="error-message">{sizeError}</p>}
-          {crustError && <p className="error-message">{crustError}</p>}
-          {toppingsError && <p className="error-message">{toppingsError}</p>}
-        </div>
         <div className="boyutVeHamur">
           <div className="boyutcont">
+          {sizeError && <p className="error-message">{sizeError}</p>}
             <p className="bhyazi">
               Boyut Seç{" "}
               <p style={{ color: "red", display: "inline-flex" }}>*</p>
@@ -220,13 +219,11 @@ function Siparis() {
             </ButtonToolbar>
           </div>
           <div className="hamurcont">
+          {crustError && <p className="error-message">{crustError}</p>}
               <FormGroup row>
                 <legend className="secenek">
-                  Hamur Seç<p style={{ color: "red" }}>*</p>
+                  Hamur Seç<p style={{ color: "red" }}>*</p> 
                 </legend>
-
-                <br />
-                <br />
 
                 <Col sm={10} className="secenek">
                   <Input
@@ -253,6 +250,9 @@ function Siparis() {
             <p className="ekMalzemeBaslik">Ek Malzemeler</p>
             <br />
             <br />
+            <div className="error-toppings">
+            {toppingsError && <p className="error-message">{toppingsError}</p>}
+            </div>
             <p className="ekMalzeme acikGri">
               En fazla 10 malzeme seçebilirsiniz. 5₺
             </p>
