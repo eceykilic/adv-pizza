@@ -23,8 +23,8 @@ function Siparis() {
   const ekMalzemeler = [
     { name: "Pepperoni", value: "Pepperoni" },
     { name: "Sosis", value: "Sosis" },
-    { name: "Kanada Jambonu", value: "KanadaJambonu" },
-    { name: "Tavuk Izgara", value: "TavukIzgara" },
+    { name: "Kanada Jambonu", value: "Kanada Jambonu" },
+    { name: "Tavuk Izgara", value: "Tavuk Izgara" },
     { name: "Soğan", value: "Soğan" },
     { name: "Domates", value: "Domates" },
     { name: "Mısır", value: "Mısır" },
@@ -144,9 +144,7 @@ function Siparis() {
 
   /* const isButtonDisabled =
     !size || !crust || toppings.length < 4 || toppings.length > 10 || adet <= 0; 
-    
-    {toppingsError && <p className="error-message">{toppingsError}</p>}
-    */
+  */
 
   return (
     <Form onSubmit={handleSubmit}>

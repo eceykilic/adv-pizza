@@ -3,15 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Quattrocento&family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quattrocento&family=Satisfy&display=swap');
 
-
+.arkapl {
+    background-color: #CE2829;
+    height: 100vh;
+}
 .ustbaslik {
     margin: 0 auto;
     padding-top: 3rem;
-}
-
-.kipkirmizi {
-    background-color: #CE2829;
-    height: 1080px;
 }
 
 .lezzetgeliyor {

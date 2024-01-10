@@ -16,10 +16,15 @@ function Final() {
   }
 
   return (
-    <div className="kipkirmizi">
+    <div class="arkapl">
+    <header>
       <img src="logo.svg" alt="" className="ustbaslik" />
+      </header>
+      <main>
       <div className="icerik">
         <p className="lezzetgeliyor">lezzetin yolda</p>
+      
+      
         <p className="siparisalindi">SİPARİŞ ALINDI</p>
         <hr />
         <div className="sipariscont">
@@ -42,6 +47,9 @@ function Final() {
           </div>
         </div>
       </div>
+    </main>
+    <footer>
+    </footer>
     </div>
   );
 }
