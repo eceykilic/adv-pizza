@@ -17,22 +17,6 @@ function Siparis() {
     const [total, setTotal] = useState(85.5);
     const [secimler, setSecimler] = useState(0.0);
     const [errorMessage, setErrorMessage] = useState("");
-    const toppingsPrices = {
-      Pepperoni: 5,
-      Sosis: 5,
-      KanadaJambonu: 5,
-      TavukIzgara: 5,
-      Soğan: 5,
-      Domates: 5,
-      Mısır: 5,
-      Sucuk: 5,
-      Jalepeno: 5,
-      Sarımsak: 5,
-      Biber: 5,
-      Ananas: 5,
-      Kabak: 5,
-      Sucuk2: 5,
-    };
 
   const handleSizeChange = (newSize) => {
     setSize(newSize);
@@ -129,7 +113,7 @@ function Siparis() {
 
   const handleSpecialChange = (event) => {
     setSpecial(event.target.value);
-  };
+  }; 
 
   const isButtonDisabled =
     !size || !crust || toppings.length < 4 || toppings.length > 10 || adet <= 0;
@@ -236,7 +220,7 @@ function Siparis() {
                   value={crust}
                   onChange={(event) => setCrust(event.target.value)}
                 >
-                  <option value="">Hamur seç</option>
+                  <option value="">--Hamur Kalınlığı Seç--</option>
                   <option value="Kalın">Kalın</option>
                   <option value="Normal">Normal</option>
                   <option value="İnce">İnce</option>

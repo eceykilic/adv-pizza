@@ -7,11 +7,10 @@ function Final() {
   const order = location.state ? location.state.order : null;
 
   if (!order) {
-    // Handle the case where the order is not available
     return (
       <div>
-        <h1>Error: Order not found</h1>
-        <p>Sorry, the order information is missing.</p>
+        <h1>Error: Sipariş bulunamadı</h1>
+        <p>Sipariş bilgisi eksik.</p>
       </div>
     );
   }
