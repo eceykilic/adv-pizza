@@ -145,17 +145,17 @@ function Siparis() {
   /* const isButtonDisabled =
     !size || !crust || toppings.length < 4 || toppings.length > 10 || adet <= 0; 
   */
-
+  
   return (
     <Form onSubmit={handleSubmit}>
       <header>
         <div className="arkap">
           <img src="logo-2.svg" alt="" className="slogo" />
         </div>
-        <div class="main-cont">
+        <div className="main-cont">
           <div className="main-top">
             <img src="adv-form-banner.png" alt="" className="banner-img" />
-            <div class="navlinkleri">
+            <div className="navlinkleri">
               <Nav className="navKism">
                 <NavItem>
                   <NavLink tag={Link} to="/">
@@ -196,10 +196,10 @@ function Siparis() {
         <div className="boyutVeHamur">
           <div className="boyutcont">
           {sizeError && <p className="error-message">{sizeError}</p>}
-            <p className="bhyazi">
+            <div className="bhyazi">
               Boyut Seç{" "}
               <p style={{ color: "red", display: "inline-flex" }}>*</p>
-            </p>
+            </div>
 
             <ButtonToolbar aria-label="Toolbar with button groups">
               {["S", "M", "L"].map((buttonSize) => (
@@ -361,13 +361,13 @@ function Siparis() {
                     alt="lokasyon"
                     className="nav-i"
                   />
-                  <p class="iletisim-text">
+                  <p>
                     341 Londonderry Road, <br /> Istanbul Türkiye
                   </p>
                 </div>
                 <div className="nav-icons">
                   <img src="./icons/icon-2.png" alt="mail" className="nav-i" />
-                  <p class="iletisim-text">aciktim@teknolojikyemekler.com</p>
+                  <p>aciktim@teknolojikyemekler.com</p>
                 </div>
                 <div className="nav-icons">
                   <img
@@ -375,18 +375,18 @@ function Siparis() {
                     alt="telefon"
                     className="nav-i"
                   />
-                  <p class="iletisim-text">+90 216 123 45 67</p>
+                  <p>+90 216 123 45 67</p>
                 </div>
               </div>
               <div className="nav-duzen">
                 <div className="smenu">
                   <h5 className="smenu-text">Hot Menu</h5>
-                  <p class="iletext">Terminal Pizza</p>
-                  <p class="iletext">5 Kişilik Hackathlon Pizza</p>
-                  <p class="iletext">useEffect Tavuklu Pizza</p>
-                  <p class="iletext">Beyaz Console Frosty</p>
-                  <p class="iletext">Testler Geçti Mutlu Burger</p>
-                  <p class="iletext">Position Absolute Acı Burger</p>
+                  <p>Terminal Pizza</p>
+                  <p>5 Kişilik Hackathlon Pizza</p>
+                  <p>useEffect Tavuklu Pizza</p>
+                  <p>Beyaz Console Frosty</p>
+                  <p>Testler Geçti Mutlu Burger</p>
+                  <p>Position Absolute Acı Burger</p>
                 </div>
               </div>
               <div className="inst">

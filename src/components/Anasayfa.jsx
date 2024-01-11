@@ -114,7 +114,7 @@ function Anasayfa() {
           <h3 className="encokpaket">en çok paketlenen menüler</h3>
           <h2 className="aciktiran">Acıktıran Kodlara Doyuran Lezzetler</h2>
         </div>
-        <div class="butonlar">
+        <div className="butonlar">
           <button className="yemek-butonu">
             <img src="./icons/1.svg" alt="test" />
             <span className="yemek-text">Kore</span>
@@ -213,7 +213,6 @@ function Anasayfa() {
         </div>
       </div>
       </main>
-      
       <footer>
       <div className="nav-container">
       <div className="navi">
@@ -222,26 +221,26 @@ function Anasayfa() {
           <img className="teknobas" src="logo-footer.svg" alt="" />
           <div className="nav-icons">
                   <img src="./icons/icon-1.png" alt="lokasyon" className="nav-i"/>
-                  <p class="iletisim-text">341 Londonderry Road, <br /> Istanbul Türkiye</p>                  
+                  <p>341 Londonderry Road, <br /> Istanbul Türkiye</p>                  
           </div>
           <div className="nav-icons">
                   <img src="./icons/icon-2.png" alt="mail" className="nav-i" />
-                  <p class="iletisim-text">aciktim@teknolojikyemekler.com</p>
+                  <p>aciktim@teknolojikyemekler.com</p>
           </div>
           <div className="nav-icons">
                   <img src="./icons/icon-3.png" alt="telefon" className="nav-i" />
-                  <p class="iletisim-text">+90 216 123 45 67</p>
+                  <p>+90 216 123 45 67</p>
           </div>
           </div> 
           <div className="nav-duzen">
           <div className="smenu">
             <h5 className="smenu-text">Hot Menu</h5>
-          <p class="iletext">Terminal Pizza</p>
-          <p class="iletext">5 Kişilik Hackathlon Pizza</p>
-          <p class="iletext">useEffect Tavuklu Pizza</p>
-          <p class="iletext">Beyaz Console Frosty</p>
-          <p class="iletext">Testler Geçti Mutlu Burger</p>
-          <p class="iletext">Position Absolute Acı Burger</p>
+          <p>Terminal Pizza</p>
+          <p>5 Kişilik Hackathlon Pizza</p>
+          <p>useEffect Tavuklu Pizza</p>
+          <p>Beyaz Console Frosty</p>
+          <p>Testler Geçti Mutlu Burger</p>
+          <p>Position Absolute Acı Burger</p>
           </div>
           </div>   
           <div className="inst">

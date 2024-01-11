@@ -16,7 +16,7 @@ function Final() {
   }
 
   return (
-    <div class="arkapl">
+    <div className="arkapl">
     <header>
       <img src="logo.svg" alt="" className="ustbaslik" />
       </header>
@@ -28,7 +28,7 @@ function Final() {
         <p className="siparisalindi">SİPARİŞ ALINDI</p>
         <hr />
         <div className="sipariscont">
-          <p class="pizzadi">Position: Absolute Acı Pizza</p>
+          <p className="pizzadi">Position: Absolute Acı Pizza</p>
           <div className="siparis-info">
             <p>Boyut: <strong>{order.size}</strong></p>
             <p>Ek Malzemeler: <strong>{order.toppings.join(", ")}</strong></p>
