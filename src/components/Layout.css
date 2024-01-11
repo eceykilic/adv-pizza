@@ -404,3 +404,117 @@
     padding-right: 30rem;
     flex-direction: column;
 }
+
+@media (max-width: 600px) {
+    body {
+      min-width: 300px;
+    }
+  }
+
+  .arkaplan {
+    width: 100%;
+    background-size: cover;
+    padding-top: 0.1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .yazi {
+    margin-bottom: 1rem;
+  }
+
+  .icons-container {
+    width: 50%;
+    display: flex;
+    margin: 0 auto;
+    row-gap:1rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-between;
+  }
+
+  .reklamlar {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+
+  .lezzetus {
+    margin: 0 auto;
+    padding-left: 1.5rem;
+  }
+
+  .pa {
+    margin: 0 auto;
+  }
+  
+  .ozel-lezzetus {
+   font-size: 2rem;
+   margin: 0 auto;
+  }
+
+  .pizza-buton {
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    width: 9rem;
+    font-size: 1.2rem;  
+  }
+
+  .ham {
+    padding:0;
+    margin:0;
+  }
+
+  .hamb {
+    padding:0;
+    margin:0;
+    margin-bottom:1rem;
+  }
+
+  .sag-siparis {
+    margin: 0 auto;
+    width: 9rem;
+    font-size: 1.2rem; 
+  }
+
+  .kur {
+    padding:0;
+    margin:0;
+  }
+
+  .kury {
+    padding:0;
+    margin:0;
+    margin-bottom:1rem;
+  }
+
+  .butonlar {
+    flex-wrap: wrap;
+  }
+
+  .urun-resimleri {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+  }
+ 
+  .iletisim-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-duzen {
+    margin: 0 auto;
+  }
+
+  div.smenu {
+    margin: 0 auto;
+    padding-right: 0;
+  }
