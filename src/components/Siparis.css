@@ -374,4 +374,50 @@ a.nav-link:hover {
   font-family: "Barlow", sans-serif;
 }
 
+@media (max-width: 600px) {
+  body {
+    min-width: 300px;
+  }
 
+
+
+.navKism {
+  margin: 1rem;
+}
+
+.pizza-adi {
+  margin:1rem;
+}
+
+.fiyatbil {
+  max-width: 600px;
+  margin: 1rem;
+}
+
+.urun-acik {
+  max-width: 600px;
+  margin: 1rem;
+}
+
+.boyutVeHamur {
+  max-width: 600px;
+  margin: 1rem;
+}
+
+.ekMal-container {
+  max-width: 600px;
+  margin: 1rem;
+}
+
+.siparisNotu {
+  max-width: 570px;
+  margin: 1rem;
+}
+
+.artiEksi {
+  max-width: 570px;
+  margin: 1rem;
+  margin-bottom:0;
+}
+
+}

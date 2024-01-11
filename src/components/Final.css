@@ -101,3 +101,29 @@
     font-weight: 600;
     font-size: 18px;
 }
+
+@media (max-width: 600px) {
+    body {
+      min-width: 300px;
+    }
+  
+
+  .icerik {
+    width: 600px;
+    flex-wrap: wrap;
+  }
+
+  .arkapl {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .siparis-top {
+    margin-bottom: 3rem;
+  }
+
+  .sipariscont {
+    background-color: #CE2829;
+  }
+
+}
